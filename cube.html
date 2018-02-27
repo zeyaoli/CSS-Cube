@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Cube</title>
+  <link rel="stylesheet" href="cube.css">
+  <style>
+    @keyframes spin {
+      from {
+        transform: rotateY(90deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    div.cube {
+      animation-name: spin;
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .upper {
+      top: -250px;
+    }
+
+    .lower {
+      top: 250px;
+    }
+
+    .cube:hover {
+      animation-play-state: paused;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="context">
+    <div id="container">
+      <div class="cube">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <!-- // .cube -->
+
+      <div class="cube upper">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <!-- // .cube -->
+
+      <div class="cube lower">
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <!-- // .cube -->
+    </div>
+    <!-- // #container -->
+  </div>
+</body>
+
+</html>
